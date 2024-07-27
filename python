@@ -37,6 +37,11 @@ function on_interrupt_trap
 
 trap on_interrupt_trap INT
 
+if [[ ! $BASE_PYTHON_VERSION =~ ^[0-9.]+$ ]]; then
+    print_error "The python version is incorrect: $BASE_PYTHON_VERSION"
+    exit 1
+fi
+
 if [[ "${VIRTUALENV_PREFIX:0:1}" == "%" ]]; then
     print_error "First, you must enter the virtualenv prefix"
     print_error "Or prefixes starting with '%' are not allowed"

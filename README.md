@@ -6,6 +6,34 @@
 
 __PROJECT_DESC__
 
+## How to initialize boilerplate
+
+```shell
+./init.sh
+```
+
+## Developing
+
+```shell
+## Create a local Python virtual environment.
+./python
+
+## Black formatting
+./black.sh
+
+## PEP8 linting
+./flake8.sh
+
+## Sort import order
+./isort.sh
+
+## Type checking
+./mypy.sh
+
+## Unit testing
+./pytest.sh
+```
+
 ## License
 
 See the [LICENSE](./LICENSE) file for details. In summary,

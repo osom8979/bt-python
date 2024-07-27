@@ -268,3 +268,19 @@ if [[ $DRY_RUN -eq 0 ]]; then
 fi
 
 print_message "Initialization was successful!"
+
+if [[ $AUTO_YES -eq 0 ]]; then
+    read -r -p "Do you want to remove init scripts that are no longer used? (y/n) " YN
+else
+    YN=y
+fi
+
+if [[ "${YN,,}" != 'y' ]]; then
+    exit 0
+fi
+
+if [[ $DRY_RUN -ne 0 ]]; then
+    exit 0
+fi
+
+rm "${COMMON_FLAGS[@]}" "$(realpath "${BASH_SOURCE[0]}")"

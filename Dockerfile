@@ -8,7 +8,10 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY . .
-RUN pip wheel --no-cache-dir --no-deps --wheel-dir /app/.wheels -r requirements.txt && \
+RUN pip wheel --no-cache-dir \
+              --no-deps \
+              --wheel-dir /app/.wheels \
+              --requirement requirements.txt && \
     python setup.py bdist_wheel && \
     cp dist/*.whl /app/.wheels
 
@@ -20,8 +23,14 @@ COPY --from=builder /app/.wheels /app/.wheels
 RUN pip install --no-cache /app/.wheels/* && \
     rm -rf /app/.wheels && \
     addgroup --gid 1001 --system app && \
-    adduser --no-create-home --shell /bin/false --disabled-password --uid 1001 --system --group app
+    adduser --no-create-home \
+            --shell /bin/false \
+            --disabled-password \
+            --uid 1001 \
+            --system \
+            --group \
+            app
 USER app
 
-ENTRYPOINT ["python", "-OO", "-m", "bt_python"]
+ENTRYPOINT ["python", "-OO", "-m", "__PACKAGE_LOWER__"]
 CMD ["server"]

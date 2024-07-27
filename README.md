@@ -1,12 +1,12 @@
-# bt-python
+# __PROJECT_NAME__
 
-[![PyPI](https://img.shields.io/pypi/v/bt-python?style=flat-square)](https://pypi.org/project/bt-python/)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/bt-python?style=flat-square)
-[![GitHub](https://img.shields.io/github/license/yourid/bt-python?style=flat-square)](https://github.com/yourid/bt-python/)
+[![PyPI](https://img.shields.io/pypi/v/__PROJECT_NAME__?style=flat-square)](https://pypi.org/project/__PROJECT_NAME__/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/__PROJECT_NAME__?style=flat-square)
+[![GitHub](https://img.shields.io/github/license/__GITHUB_ID__/__PROJECT_NAME__?style=flat-square)](https://github.com/__GITHUB_ID__/__PROJECT_NAME__/)
 
-Boilterplate Template Python Project
+__PROJECT_DESC__
 
 ## License
 
 See the [LICENSE](./LICENSE) file for details. In summary,
-**bt-python** is licensed under the **MIT license**.
+**__PROJECT_NAME__** is licensed under the **MIT license**.

@@ -250,7 +250,7 @@ INIT_FILES_LENGTH="${#INIT_FILES[@]}";
 
 for (( i = 0; i < INIT_FILES_LENGTH; i++ )); do
     file_path="$ROOT_DIR/${INIT_FILES[$i]}"
-    temp_path="$ROOT_DIR/${INIT_FILES[$i]}.$SED_INPLACE_SUFFIX"
+    temp_path="$ROOT_DIR/${INIT_FILES[$i]}$SED_INPLACE_SUFFIX"
 
     if [[ $DRY_RUN -eq 0 ]]; then
         sed "-i$SED_INPLACE_SUFFIX" "${SED_ARGS[@]}" "$file_path"

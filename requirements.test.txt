@@ -1,5 +1,4 @@
 black>=24.4.2
-colorama>=0.4.6  # To use the `--color` option in isort
 coverage>=7.6.0
 flake8>=7.1.0
 isort>=5.13.2

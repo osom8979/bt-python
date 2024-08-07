@@ -134,7 +134,7 @@ INIT_FILES=(
     ".github/workflows/python-test.yml"
     ".run/main.run.xml"
     ".vim/coc-settings.json"
-    "__PACKAGE_LOWER__/logging/colored_formatter.py"
+    "__PACKAGE_LOWER__/logging/formatters/colored.py"
     "__PACKAGE_LOWER__/logging/logging.py"
     "__PACKAGE_LOWER__/logging/__init__.py"
     "__PACKAGE_LOWER__/aio/__init__.py"

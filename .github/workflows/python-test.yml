@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  USE_SYSTEM_PYTHON: 3
+  USE_SYSTEM_PYTHON: __PYTHON_MAJOR__
 
 jobs:
   test:
@@ -18,10 +18,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: setup python 3.11
+      - name: setup python __PYTHON_MAJOR__.__PYTHON_MINOR__
         uses: actions/setup-python@v1
         with:
-          python-version: 3.11
+          python-version: __PYTHON_MAJOR__.__PYTHON_MINOR__
 
       - name: pip caching
         uses: actions/cache@v1

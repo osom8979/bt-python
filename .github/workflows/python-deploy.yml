@@ -6,7 +6,7 @@ on:
       - '[0-9]+.[0-9]+.[0-9]+'
 
 env:
-  USE_SYSTEM_PYTHON: 3
+  USE_SYSTEM_PYTHON: __PYTHON_MAJOR__
 
 permissions:
   contents: read
@@ -21,10 +21,10 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: setup python 3.9
+      - name: setup python __PYTHON_MAJOR__.__PYTHON_MINOR__
         uses: actions/setup-python@v1
         with:
-          python-version: 3.9
+          python-version: __PYTHON_MAJOR__.__PYTHON_MINOR__
 
       - name: pip caching
         uses: actions/cache@v1

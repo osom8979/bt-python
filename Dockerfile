@@ -8,7 +8,8 @@ RUN apt-get update && \
 
 WORKDIR /app
 COPY . .
-RUN pip wheel --no-cache-dir \
+RUN pip install --no-cache-dir setuptools wheel && \
+    pip wheel --no-cache-dir \
               --no-deps \
               --wheel-dir /app/.wheels \
               --requirement requirements.txt && \

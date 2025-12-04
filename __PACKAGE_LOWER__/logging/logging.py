@@ -13,7 +13,9 @@ from logging import (
     StreamHandler,
 )
 from logging import config as logging_config
-from logging import getLogger
+from logging import (
+    getLogger,
+)
 from logging.handlers import TimedRotatingFileHandler
 from sys import stdout
 from typing import Final, Literal, Optional, Sequence, Union, get_args
